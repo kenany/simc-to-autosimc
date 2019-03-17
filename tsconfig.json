@@ -1,0 +1,12 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
+    "jsxFactory": "h",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "target": "es2017"
+  }
+}

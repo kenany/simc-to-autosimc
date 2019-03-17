@@ -1,0 +1,1 @@
+require('./init-app.tsx');
