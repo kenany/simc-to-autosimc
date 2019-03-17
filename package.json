@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --host 0.0.0.0 --hot"
   },
   "dependencies": {
-    "emotion": "^10.0.0",
+    "emotion": "^10.0.9",
     "preact": "^8.3.1"
   },
   "devDependencies": {
