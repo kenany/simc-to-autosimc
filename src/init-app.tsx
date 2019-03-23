@@ -29,7 +29,7 @@ root.setAttribute('id', 'app_root');
 if (process.env.NODE_ENV !== 'production') {
   require('preact/debug');
 
-  (module as any).hot.accept('./components/App', () => {
+  module.hot!.accept('./components/App', () => {
     import('./components/App').then(({ default: App }) => {
       root = render(<App />, document.body, root);
     });
