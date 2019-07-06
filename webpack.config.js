@@ -1,4 +1,4 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
@@ -70,14 +70,7 @@ module.exports = (_, env) => {
       publicPath: '/'
     },
     plugins: [
-      isProd && new CleanWebpackPlugin([
-        'assets',
-        '**/*.{css,js,json,html,map}'
-      ], {
-        root: path.resolve(__dirname, 'build'),
-        verbose: false,
-        beforeEmit: true
-      }),
+      isProd && new CleanWebpackPlugin(),
       new webpack.DefinePlugin({
         process: '{}'
       }),
