@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "emotion": "10.0.23",
-    "preact": "8.5.2"
+    "preact": "8.5.3"
   },
   "devDependencies": {
     "@babel/core": "7.6.4",
