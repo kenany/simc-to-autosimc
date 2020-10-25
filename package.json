@@ -2,11 +2,10 @@
   "name": "simc-to-autosimc",
   "version": "1.0.0",
   "description": "",
+  "private": true,
   "scripts": {
     "build": "webpack -p",
-    "start": "webpack-dev-server --host 0.0.0.0 --hot",
-    "test": "npm run test:size",
-    "test:size": "bundlesize -f build/*.js"
+    "start": "webpack-dev-server --host 0.0.0.0 --hot"
   },
   "dependencies": {
     "emotion": "10.0.27",
@@ -23,7 +22,6 @@
     "@types/webpack-env": "1.15.3",
     "babel-loader": "8.1.0",
     "babel-plugin-emotion": "10.0.33",
-    "bundlesize": "0.18.0",
     "clean-webpack-plugin": "3.0.0",
     "html-webpack-plugin": "4.5.0",
     "prerender-loader": "1.3.0",
