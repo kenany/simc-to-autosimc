@@ -24,7 +24,7 @@
     "babel-loader": "8.2.2",
     "babel-plugin-emotion": "10.0.33",
     "clean-webpack-plugin": "3.0.0",
-    "html-webpack-plugin": "4.5.1",
+    "html-webpack-plugin": "5.0.0",
     "prerender-loader": "1.3.0",
     "terser-webpack-plugin": "4.2.3",
     "ts-loader": "8.0.14",
