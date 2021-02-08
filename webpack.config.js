@@ -1,7 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = (_, env) => {
@@ -35,32 +34,9 @@ module.exports = (_, env) => {
       ]
     },
     node: {
-      console: false,
-      global: true,
-      process: false,
-      __filename: 'mock',
       __dirname: 'mock',
-      Buffer: false,
-      setImmediate: false
-    },
-    optimization: {
-      minimizer: [
-        new TerserWebpackPlugin({
-          sourceMap: isProd,
-          extractComments: 'build/licenses.txt',
-          terserOptions: {
-            compress: {
-              inline: 1
-            },
-            mangle: {
-              safari10: true
-            },
-            output: {
-              safari10: true
-            }
-          }
-        })
-      ]
+      __filename: 'mock',
+      global: true
     },
     output: {
       chunkFilename: '[name].[chunkhash:5].js',
@@ -85,7 +61,7 @@ module.exports = (_, env) => {
           removeRedundantAttributes: true,
           removeComments: true
         },
-        template: isProd ? '!!prerender-loader?string!src/index.html' : 'src/index.html'
+        template: 'src/index.html'
       }),
     ].filter(Boolean),
     resolve: {
