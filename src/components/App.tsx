@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import { Component, h } from 'preact';
+import { Component, h, Fragment } from 'preact';
 
 import Textarea from './Textarea';
 import convert from '../convert';
@@ -30,13 +30,13 @@ class App extends Component<Props, State> {
 
   public render({}: Props, { simcInput }: State) {
     return (
-      <div>
+      <Fragment>
         <h1 className={centerClassName}>simc to autosimc</h1>
         <h2>simc input</h2>
         <Textarea onKeyUp={this.onSimcInputChange.bind(this)} value={simcInput} />
         <h2>autosimc input</h2>
         <Textarea value={convert(simcInput)} />
-      </div>
+      </Fragment>
     );
   }
 }

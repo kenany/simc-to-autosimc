@@ -22,16 +22,11 @@ injectGlobal`
   }
 `
 
-let root = document.getElementById('app_root') as Element;
-root = render(<App />, document.body, root);
-root.setAttribute('id', 'app_root');
+const root = document.getElementById('app') as HTMLElement;
 
-if (process.env.NODE_ENV !== 'production') {
-  require('preact/debug');
-
-  module.hot!.accept('./components/App', () => {
-    import('./components/App').then(({ default: App }) => {
-      root = render(<App />, document.body, root);
-    });
-  });
+async function main() {
+  if (process.env.NODE_ENV !== 'production') await import('preact/debug');
+  render(<App />, root);
 }
+
+main();
