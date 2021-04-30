@@ -1,4 +1,4 @@
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 import { Component, h, Fragment } from 'preact';
 
 import Textarea from './Textarea';

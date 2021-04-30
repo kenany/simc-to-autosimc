@@ -1,7 +1,7 @@
 module.exports = {
   plugins: [
     "@babel/plugin-syntax-dynamic-import",
-    ["emotion", {
+    ["@emotion/babel-plugin", {
       "cssPropOptimization": false
     }]
   ]
