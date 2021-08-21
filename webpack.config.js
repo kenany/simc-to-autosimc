@@ -9,12 +9,14 @@ module.exports = (_, env) => {
 
   return {
     devServer: {
-      clientLogLevel: 'none',
-      compress: true,
-      contentBase: path.resolve(__dirname, 'src'),
+      client: {
+        logging: 'none',
+        overlay: false
+      },
       historyApiFallback: true,
-      overlay: false,
-      stats: 'minimal'
+      static: {
+        directory: path.resolve(__dirname, 'src')
+      }
     },
     devtool: !isProd && 'inline-source-map',
     entry: {
