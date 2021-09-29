@@ -16,7 +16,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@emotion/babel-plugin": "11.3.0",
     "@kenan/renovate-config": "1.5.1",
-    "@types/node": "14.17.19",
+    "@types/node": "14.17.20",
     "@types/webpack-env": "1.16.2",
     "babel-loader": "8.2.2",
     "clean-webpack-plugin": "4.0.0",
