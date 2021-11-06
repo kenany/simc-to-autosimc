@@ -1,0 +1,39 @@
+name: deploy
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+jobs:
+  deploy:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node-version: [16]
+        os: [ubuntu-latest]
+    steps:
+    - name: Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2.4.1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Update npm
+      run: |
+        npm install -g npm
+        npm --version
+    - uses: actions/checkout@v2.4.0
+    - name: Install dependencies
+      uses: bahmutov/npm-install@v1.7.10
+    - run: npm ls
+    - name: Build
+      run: npm run build
+    - name: Deploy
+      uses: burnett01/rsync-deployments@5.1
+      with:
+        switches: --exclude='.*' --chmod='a+r' --recursive --delete --checksum --copy-links --verbose --itemize-changes --stats
+        path: build/
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_user: ${{ secrets.DEPLOY_USER }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}

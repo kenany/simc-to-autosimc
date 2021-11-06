@@ -1,8 +1,5 @@
 name: nodejs
 on: [pull_request, push]
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
-  cancel-in-progress: true
 jobs:
   build:
     runs-on: ${{ matrix.os }}

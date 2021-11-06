@@ -45,7 +45,7 @@ module.exports = (_, env) => {
       filename: isProd ? '[name].[chunkhash:5].js' : '[name].js',
       globalObject: 'self',
       path: path.resolve(__dirname, 'build'),
-      publicPath: '/'
+      publicPath: 'auto'
     },
     plugins: [
       isProd && new CleanWebpackPlugin(),
