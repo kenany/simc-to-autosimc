@@ -1,5 +1,5 @@
 {
-  "extends": ["@kenan/renovate-config"],
+  "extends": ["local>kenany/renovate-config"],
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": null
