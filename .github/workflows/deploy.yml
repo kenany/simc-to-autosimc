@@ -29,7 +29,7 @@ jobs:
     - name: Build
       run: npm run build
     - name: Deploy
-      uses: burnett01/rsync-deployments@5.1
+      uses: burnett01/rsync-deployments@5.2
       with:
         switches: --exclude='.*' --chmod='a+r' --recursive --delete --checksum --copy-links --verbose --itemize-changes --stats
         path: build/
