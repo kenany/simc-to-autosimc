@@ -16,7 +16,7 @@
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@emotion/babel-plugin": "11.9.2",
     "@types/node": "16.11.32",
-    "@types/webpack-env": "1.16.3",
+    "@types/webpack-env": "1.16.4",
     "babel-loader": "8.2.5",
     "clean-webpack-plugin": "4.0.0",
     "html-webpack-plugin": "5.5.0",
