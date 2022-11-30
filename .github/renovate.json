@@ -1,7 +1,6 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["local>kenany/renovate-config"],
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": null
-  }
+  "assignees": ["kenany"],
+  "reviewers": ["kenany"]
 }
