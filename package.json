@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@emotion/css": "11.10.0",
-    "preact": "10.13.2"
+    "preact": "10.15.1"
   },
   "devDependencies": {
     "@babel/core": "7.21.8",
