@@ -12,7 +12,7 @@
     "preact": "10.19.2"
   },
   "devDependencies": {
-    "@babel/core": "7.23.3",
+    "@babel/core": "7.23.6",
     "@babel/plugin-syntax-dynamic-import": "7.8.3",
     "@emotion/babel-plugin": "11.11.0",
     "@types/node": "20.10.2",
