@@ -14,7 +14,7 @@ jobs:
       run: |
         npm install -g npm
         npm --version
-    - uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
+    - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
     - uses: preactjs/compressed-size-action@946a292cd35bd1088e0d7eb92b69d1a8d5b5d76a # 2.8.0
       with:
         pattern: 'build/*.js'
